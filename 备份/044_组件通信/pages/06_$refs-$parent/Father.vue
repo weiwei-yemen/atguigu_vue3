@@ -43,6 +43,7 @@
 	function getAllChild(refs:{[key:string]:any}){
 		console.log(refs)
 		for (let key in refs){
+			// 注意点：refs是响应式的，获取响应式对象中的属性的时候，底层会自动读取value属性
 			refs[key].book += 3
 		}
 	}
